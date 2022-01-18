@@ -18,11 +18,3 @@ exports.post = (req, res, next) => {
         res.status(200).send(result);
     }
 };
-
-function resolve_funcao_segundo_grau(a, b, c) {
-
-}
-
-function isNumber(value) {
-    return !isNaN(value)
-}
