@@ -38,12 +38,7 @@ function isValidParameters(valueA, valueB, valueC) {
 }
 
 function AssembleEquation(valueA, valueB, valueC) {
-    const equation = Equation(valueA, valueB, valueC);
-    logger.info({
-        date: new Date(),
-        message: equation
-    });
-    return equation;
+    return Equation(valueA, valueB, valueC);
 }
 
 module.exports = BhaskaraHandler;
