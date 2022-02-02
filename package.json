@@ -14,6 +14,7 @@
     "jest": "27.4.7"
   },
   "dependencies": {
-    "fastify": "3.27.0"
+    "fastify": "3.27.0",
+    "winston": "3.5.1"
   }
 }
