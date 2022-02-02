@@ -7,7 +7,6 @@
     "test": "jest",
     "start": "node ./API/server.js",
     "test:ci": "jest --ci --coverage --coverageReporters=html --coverageReporters=lcov"
-    "start": "node ./API/server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +17,5 @@
   "dependencies": {
     "fastify": "3.27.0",
     "winston": "3.5.1"
-    "fastify": "3.27.0"
   }
 }
