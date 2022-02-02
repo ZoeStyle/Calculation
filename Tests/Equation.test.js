@@ -14,15 +14,15 @@ test('validating the value of x2', () => {
 
 test('validating if there is an error when informing the valueA zeroed', () => {
     const valid = equation(0, 10, 5);
-    expect(valid?.error).toBe('The values ​​entered are not a 2nd degree equation');
+    expect(valid?.message).toBe('The values ​​entered are not a 2nd degree equation');
 });
 
 test('validating if there is an error when informing the valueB and C zeroed', () => {
     const valid = equation(1, 0, 0);
-    expect(valid?.error).toBe('ValueB and valueC are set to zero');
+    expect(valid?.message).toBe('ValueB and valueC are set to zero');
 });
 
 test('Delta result is negative', () => {
     const valid = equation(10, 1, 5);
-    expect(valid?.error).toBe('The values ​​entered are not real roots');
+    expect(valid?.message).toBe('The values ​​entered are not real roots');
 });
