@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node ./API/server.js"
+    "start": "node ./API/server.js",
+    "test:ci": "jest --ci --coverage --coverageReporters=html --coverageReporters=lcov"
   },
   "keywords": [],
   "author": "",
