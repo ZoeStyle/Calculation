@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ZoeStyle_Formula_bhaskara&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ZoeStyle_Formula_bhaskara)
+
 # Calculation
 
 Projeto realizado para gerenciamento de calculos matemáticos
