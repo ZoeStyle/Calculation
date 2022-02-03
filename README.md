@@ -12,6 +12,8 @@ Foi criado um projeto Api Rest, utilizando os seguintes recursos:
 
 - Arquetetura em camadas: Test, Domain e API;
 
+- Cloud: Heroku;
+
 Funcionalidades implementadas:
 
 - Calculo da equação de 2 grau (Bhaskara)
