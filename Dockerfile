@@ -8,7 +8,7 @@ COPY package*.json ./
 
 # RUN para informar quais comandos serão executados nesse ambiente para efetuar as mudanças necessárias 
 # na infraestrutura do sistema.
-RUN npm install
+RUN npm ci
 
 # Se você está construindo seu código para produção
 # RUN npm ci --only=production
