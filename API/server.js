@@ -8,27 +8,15 @@ fastify.register(require('./routes/healthCheck.route'));
 
 const start = async () => {
     try {
-        const port = normalize_port(process.env.PORT || 40100);
+        const port = process.env.PORT;
 
-        await fastify.listen(port);
+        await fastify.listen(port, '0.0.0.0');
         logger.info('The api is running in the door' + port);
     } catch (err) {
         fastify.log.error(err);
         logger.error(err);
         process.exit(1);
     }
-}
-
-function normalize_port(val) {
-    const port = parseInt(val, 10);
-
-    if (isNaN(port))
-        return val;
-
-    if (port >= 0)
-        return port;
-
-    return false;
 }
 
 start()
