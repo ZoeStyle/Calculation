@@ -1,6 +1,6 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ZoeStyle_Formula_bhaskara&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ZoeStyle_Formula_bhaskara)
-
 # Calculation
+
+![Pipeline](https://github.com/lucasmarques73/node-api-heroku/workflows/Pipeline/badge.svg)     [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ZoeStyle_Formula_bhaskara&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ZoeStyle_Formula_bhaskara)
 
 Projeto realizado para gerenciamento de calculos matemáticos
 
