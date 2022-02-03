@@ -1,6 +1,8 @@
 # Calculation
 
-![Pipeline](https://github.com/lucasmarques73/node-api-heroku/workflows/Pipeline/badge.svg)     [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ZoeStyle_Formula_bhaskara&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ZoeStyle_Formula_bhaskara)
+![Pipeline](https://github.com/lucasmarques73/node-api-heroku/workflows/Pipeline/badge.svg) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ZoeStyle_Formula_bhaskara&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ZoeStyle_Formula_bhaskara)
+
+---
 
 Projeto realizado para gerenciamento de calculos matemáticos
 
@@ -9,6 +11,8 @@ Foi criado um projeto Api Rest, utilizando os seguintes recursos:
 - Frameworks/Bibliotecas: Node.js, Jest e Fastify;
 
 - Arquetetura em camadas: Test, Domain e API;
+
+- Cloud: Heroku;
 
 Funcionalidades implementadas:
 
