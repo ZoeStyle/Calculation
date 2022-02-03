@@ -4,8 +4,8 @@ const fastify = require('fastify')({ logger: true });
 const logger = require('../Logger/logger');
 
 fastify.register(require('fastify-cors'), {
-    origin: false,
-    methods: ['GET', 'PUT', 'POST'],
+    origin: 'https://sandbox-calc.herokuapp.com/',
+    methods: ['POST'],
 });
 
 fastify.register(require('./routes/Calculation.route'));
