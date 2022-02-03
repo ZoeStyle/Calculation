@@ -3,6 +3,11 @@
 const fastify = require('fastify')({ logger: true });
 const logger = require('../Logger/logger');
 
+fastify.register(require('fastify-cors'), {
+    origin: false,
+    methods: ['GET', 'PUT', 'POST'],
+});
+
 fastify.register(require('./routes/Calculation.route'));
 fastify.register(require('./routes/healthCheck.route'));
 
