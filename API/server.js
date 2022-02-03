@@ -3,6 +3,11 @@
 const fastify = require('fastify')({ logger: true });
 const logger = require('../Logger/logger');
 
+fastify.register(require('fastify-cors'), {
+    origin: false,
+    methods: ['GET', 'PUT', 'POST'],
+});
+
 fastify.register(require('./routes/Calculation.route'));
 fastify.register(require('./routes/healthCheck.route'));
 
@@ -10,7 +15,7 @@ const start = async () => {
     try {
         const port = process.env.PORT;
 
-        await fastify.listen(port, '0.0.0.0');
+        await fastify.listen(port);
         logger.info('The api is running in the door' + port);
     } catch (err) {
         fastify.log.error(err);
