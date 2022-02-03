@@ -8,7 +8,7 @@ fastify.register(require('./routes/healthCheck.route'));
 
 const start = async () => {
     try {
-        const port = 3000;
+        const port = normalize_port(process.env.PORT || '3000');
         await fastify.listen(port);
         logger.info('The api is running in the pota' + port);
     } catch (err) {
@@ -16,6 +16,18 @@ const start = async () => {
         logger.error(err);
         process.exit(1);
     }
+}
+
+function normalize_port(val) {
+    const port = parseInt(val, 10);
+
+    if (isNaN(port))
+        return val;
+
+    if (port >= 0)
+        return port;
+
+    return false;
 }
 
 start()
