@@ -15,7 +15,7 @@ const start = async () => {
     try {
         const port = process.env.PORT;
 
-        await fastify.listen(port);
+        await fastify.listen(port,'0.0.0.0');
         logger.info('The api is running in the door' + port);
     } catch (err) {
         fastify.log.error(err);
