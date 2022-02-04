@@ -4,7 +4,7 @@ const fastify = require('fastify')({ logger: true });
 const logger = require('../Logger/logger');
 
 fastify.register(require('fastify-cors'), {
-    origin: false,
+    origin: 'https://app.swaggerhub.com/apis/ZoeStyle/Hernandes/0.0.1#/Calculation/post_Bhaskara',
     methods: ['POST', 'OPTIONS', 'GET']
 });
 
@@ -15,7 +15,7 @@ const start = async () => {
     try {
         const port = process.env.PORT;
 
-        await fastify.listen(port,'0.0.0.0');
+        await fastify.listen(port);
         logger.info('The api is running in the door' + port);
     } catch (err) {
         fastify.log.error(err);
