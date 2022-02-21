@@ -27,7 +27,7 @@ function getRaiz(delta) {
 }
 
 function roundOffFunction(value) {
-    return Math.round(value, 2)
+    return value.toFixed(2);
 }
 
 function calculateX(valueA, valueB, delta) {

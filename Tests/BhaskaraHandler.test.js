@@ -46,11 +46,11 @@ test('inform the null valueC', () => {
 test('Return Value From X1 Must Be -0.5278640450004204', () => {
     const request = { 'valueA': 1, 'valueB': 10, 'valueC': 5 }
     const valid = BhaskaraHandler(request);
-    expect(valid?.x1).toBe(-0.5278640450004204);
+    expect(valid?.x1).toBe('-0.53');
 });
 
 test('Return Value From X2 Must Be -9.47213595499958', () => {
     const request = { 'valueA': 1, 'valueB': 10, 'valueC': 5 }
     const valid = BhaskaraHandler(request);
-    expect(valid?.x2).toBe(-9.47213595499958);
+    expect(valid?.x2).toBe('-9.47');
 });
