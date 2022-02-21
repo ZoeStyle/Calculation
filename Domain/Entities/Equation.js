@@ -34,8 +34,8 @@ function calculateX(valueA, valueB, delta) {
     const raiz = getRaiz(delta);
     const divisor = getDivisor(valueA);
 
-    const x1 = (-valueB + raiz) / divisor;
-    const x2 = (-valueB - raiz) / divisor;
+    let x1 = (-valueB + raiz) / divisor;
+    let x2 = (-valueB - raiz) / divisor;
 
     x1 = roundOffFunction(x1)
     x2 = roundOffFunction(x2)
