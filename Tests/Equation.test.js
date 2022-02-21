@@ -4,12 +4,12 @@ const equation = require('../Domain/Entities/Equation');
 
 test('validating the value of x1', () => {
     const valid = equation(1, 10, 5);
-    expect(valid?.x1).toBe(-0.5278640450004204);
+    expect(valid?.x1).toBe('-0.53');
 });
 
 test('validating the value of x2', () => {
     const valid = equation(1, 10, 5);
-    expect(valid?.x2).toBe(-9.47213595499958);
+    expect(valid?.x2).toBe('-9.47');
 });
 
 test('validating if there is an error when informing the valueA zeroed', () => {
