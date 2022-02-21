@@ -1,12 +1,55 @@
 'use strict'
 
-const Delta = require('../ValuObjects/Delta');
-const Raiz = require('../ValuObjects/Raiz');
 const logger = require('../../Logger/logger');
+
+function isValid(valueA, valueB, valueC) {
+    return valueA !== 0 && !isNaN(valueA) && !isNaN(valueB) && !isNaN(valueC);
+}
+
+function validateIfValueAAndValueBAreEqualTo0(valueB, valueC) {
+    return valueB === 0 && valueC === 0;
+}
+
+function validateIfDeltaIsLessThan0(delta) {
+    return delta < 0;
+}
+
+function getDelta(valueA, valueB, valueC) {
+    return (valueB * valueB) - (4 * valueA * valueC);
+}
+
+function getDivisor(valueA) {
+    return (2 * valueA);
+}
+
+function getRaiz(delta) {
+    return Math.sqrt(delta)
+}
+
+function roundOffFunction(value) {
+    return Math.round(value, 2)
+}
+
+function calculateX(valueA, valueB, delta) {
+    const raiz = getRaiz(delta);
+    const divisor = getDivisor(valueA);
+
+    const x1 = (-valueB + raiz) / divisor;
+    const x2 = (-valueB - raiz) / divisor;
+
+    x1 = roundOffFunction(x1)
+    x2 = roundOffFunction(x2)
+
+    return {
+        'x1': x1,
+        'x2': x2
+    }
+}
+
 
 function Equation(valueA, valueB, valueC) {
     if (isValid(valueA, valueB, valueC)) {
-        const delta = calculateDelta(valueA, valueB, valueC);
+        const delta = getDelta(valueA, valueB, valueC);
 
         if (validateIfDeltaIsLessThan0(delta)) {
             const err = {
@@ -25,7 +68,7 @@ function Equation(valueA, valueB, valueC) {
             return err;
         }
         else {
-            return calculateRaiz(valueA, valueB, delta);
+            return calculateX(valueA, valueB, delta);
         }
     }
     else {
@@ -36,32 +79,6 @@ function Equation(valueA, valueB, valueC) {
         logger.error(err);
         return err;
     }
-}
-
-function validateIfValueAAndValueBAreEqualTo0(valueB, valueC) {
-    return valueB === 0 && valueC === 0;
-}
-
-function validateIfDeltaIsLessThan0(delta) {
-    return delta < 0;
-}
-
-function calculateRaiz(valueA, valueB, delta) {
-    const raiz = Raiz(valueA, valueB, delta);
-    logger.info({
-        date: new Date(),
-        message: 'success',
-        data: raiz
-    })
-    return raiz;
-}
-
-function calculateDelta(valueA, valueB, valueC) {
-    return Delta(valueA, valueB, valueC);
-}
-
-function isValid(valueA, valueB, valueC) {
-    return valueA !== 0 && !isNaN(valueA) && !isNaN(valueB) && !isNaN(valueC);
 }
 
 module.exports = Equation;
